@@ -1,0 +1,30 @@
+{
+  "name": "module-14-tech-blog-application",
+  "version": "1.0.0",
+  "description": "Challenge 14 for the MVC module of the Coding Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliteHuskie/module-14-tech-blog-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliteHuskie/module-14-tech-blog-application/issues"
+  },
+  "homepage": "https://github.com/EliteHuskie/module-14-tech-blog-application#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
+  }
+}

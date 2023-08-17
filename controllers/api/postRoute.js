@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
-const { Post } = require('../models');
+const withAuth = require('../../utils/auth');
+const { Post } = require('../../models');
 
 // Route to create a new post
 router.post('/create-post', withAuth, async (req, res) => {

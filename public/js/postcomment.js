@@ -4,8 +4,13 @@ if (commentForm) {
     commentForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        var url = window.location.pathname;
+        var post_id = url.substring(url.lastIndexOf('/') + 1);
+
         const commentInput = document.querySelector('#comment');
         const comment = commentInput.value;
+
+        console.log (comment);
 
         try {
             const response = await fetch('/api/comments/create-comment', {

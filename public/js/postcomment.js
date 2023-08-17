@@ -15,7 +15,7 @@ if (commentForm) {
         try {
             const response = await fetch('/api/comments/create-comment', {
                 method: 'POST',
-                body: JSON.stringify({ comment }),
+                body: JSON.stringify({ comment, post_id }),
                 headers: { 'Content-Type': 'application/json' },
             });
 

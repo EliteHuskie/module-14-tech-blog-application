@@ -28,6 +28,7 @@ const loginFormHandler = async (event) => {
             document.location.replace('/');
         } catch (error) {
             const errorMessage = 'Login failed. Please check your credentials.';
+            alert(errorMessage); // Display the error message
         }
     }
 };
@@ -45,10 +46,12 @@ const signupFormHandler = async (event) => {
                 await sendRequest('/api/users', 'POST', { name, email, password });
                 document.location.replace('/');
             } catch (error) {
-                const errorMessage = 'Signup failed. Please try again later.';  
+                const errorMessage = 'Signup failed. Please try again later.';
+                alert(errorMessage); // Display the error message
             }
         } else {     
-            const errorMessage = 'Password and confirm password do not match.';       
+            const errorMessage = 'Password and confirm password do not match.';
+            alert(errorMessage); // Display the error message
         }
     }
 };

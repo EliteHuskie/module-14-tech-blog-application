@@ -8,8 +8,9 @@ router.post('/create-post', withAuth, async (req, res) => {
     // Create a new post in the database
     const newPost = await Post.create({
       title: req.body.title,
-      content: req.body.content,
+      contents: req.body.content,
       user_id: req.session.user_id,
+      created_at: new Date().toISOString(),
     });
 
     res.status(200).json(newPost);

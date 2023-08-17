@@ -1,0 +1,26 @@
+<div>
+    <h3>{{post.title}}</h3>
+    <p>{{post.user.name}}</p>
+    <p>{{format_date post.date_created}}</p>
+    <p>{{post.content}}</p>
+</div>
+{{#each post.comments as |comment|}}
+<div>
+    <p>{{comment.user.name}}</p>
+    <p>{{comment.content}}</p>
+    <p>{{format_date comment.date_created}}</p>
+</div>
+{{/each}}
+
+<form class="form login-form">
+
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" rows="3" id="comment"></textarea>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
+
+{{#if logged_in}}
+<script src="/js/postcomment.js"></script>
+{{/if}}

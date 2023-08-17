@@ -12,7 +12,7 @@ if (createPostForm) {
             const content = contentInput.value;
 
             try {
-                const response = await fetch('/create-post', {
+                const response = await fetch('api/posts/create-post', {
                     method: 'POST',
                     body: JSON.stringify({ title, content }),
                     headers: { 'Content-Type': 'application/json' },

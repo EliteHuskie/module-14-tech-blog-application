@@ -1,0 +1,21 @@
+{{#if logged_in}}
+    <div class="mt-4">
+        <h3>{{user.name}}'s Dashboard</h3>
+
+        <!-- New post creation form -->
+        <div class="new-post-form mt-3">
+            <h4>Create New Post</h4>
+            <form class="form new-post-form" method="POST" action="/create-post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input class="form-control" type="text" id="title" name="title">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content:</label>
+                    <textarea class="form-control" rows="3" id="content" name="content"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Create Post</button>
+            </form>
+        </div>
+    </div>
+{{/if}}

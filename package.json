@@ -4,6 +4,7 @@
   "description": "Challenge 14 for the MVC module of the Coding Bootcamp",
   "main": "index.js",
   "scripts": {
+    "seed": "node seeds/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

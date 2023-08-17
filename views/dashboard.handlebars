@@ -5,7 +5,7 @@
         <!-- New post creation form -->
         <div class="new-post-form mt-3">
             <h4>Create New Post</h4>
-            <form class="form new-post-form" method="POST" action="/create-post">
+            <form id="create-post-form" class="form new-post-form">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title:</label>
                     <input class="form-control" type="text" id="title" name="title">
@@ -19,3 +19,6 @@
         </div>
     </div>
 {{/if}}
+
+<!-- Include the script for handling new post creation -->
+<script src="./js/createpost.js"></script>

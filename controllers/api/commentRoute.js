@@ -7,7 +7,7 @@ router.post('/create-comment', withAuth, async (req, res) => {
   try {
     // Create a new comment in the database
     const newComment = await Comment.create({
-      content: req.body.comment,
+      contents: req.body.comment,
       user_id: req.session.user_id,
       post_id: req.body.post_id,
       date_created: new Date().toISOString(), 

@@ -15,7 +15,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    contents: {
+    contents: { 
       type: DataTypes.TEXT,
       allowNull: false,
     },
@@ -25,6 +25,16 @@ Post.init(
         model: "User",
         key: "id",
       },
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {

@@ -5,7 +5,7 @@
         <!-- New post creation form -->
         <div class="new-post-form mt-3">
             <h4>Create New Post</h4>
-            <form class="form new-post-form" method="POST" action="/create-post">
+            <form id="create-post-form" class="form new-post-form">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title:</label>
                     <input class="form-control" type="text" id="title" name="title">
@@ -17,5 +17,24 @@
                 <button class="btn btn-primary" type="submit">Create Post</button>
             </form>
         </div>
+
+        <!-- Display existing posts -->
+        <div class="existing-posts mt-4">
+            <h4>Your Existing Posts</h4>
+            {{#each user.Posts}}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{content}}</p>
+                        <p class="card-text">{{format_date date_created}}</p>
+                        <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
     </div>
 {{/if}}
+
+<!-- Include the script for handling new post creation and deletion -->
+<script src="./js/createpost.js"></script>
+<script src="./js/deletepost.js"></script>

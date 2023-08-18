@@ -8,7 +8,7 @@ if (deleteButtons) {
                 const postId = button.getAttribute('data-post-id');
 
                 try {
-                    const response = await fetch(`/api/posts/${postId}`, {
+                    const response = await fetch(`/api/delete/${postId}`, {
                         method: 'DELETE',
                         headers: { 'Content-Type': 'application/json' },
                     });

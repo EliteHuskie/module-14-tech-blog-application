@@ -23,7 +23,7 @@ document.addEventListener('click', async (event) => {
             try {
                 const response = await fetch(`/api/update/${postId}`, {
                     method: 'PUT',
-                    body: JSON.stringify({ title: updatedTitle, contents: updatedContent }),
+                    body: JSON.stringify({ title: updatedTitle, content: updatedContent }),
                     headers: { 'Content-Type': 'application/json' },
                 });
 

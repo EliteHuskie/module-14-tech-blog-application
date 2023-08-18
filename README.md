@@ -24,6 +24,10 @@ Tech Blog application that allows users to post and comment to collaborate with 
 
 Sign-Up/Log into website, you'll be presented with your own dashboard that allows you to create posts and then you can also comment on others as well.
 
+Heroku URL: https://the-tech-blog-app-2023-6f8101ddf7b5.herokuapp.com/
+
+![The Tech Blog Application](./public/images/my-tech-blog-gif.gif)
+
 ## Installation
 
 Clone repository
@@ -47,6 +51,8 @@ Sign-Up/Login
 Create Posts, Delete Posts
 
 Add Comments to other Posts
+
+Sign Out
 
 ## License
 

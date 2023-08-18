@@ -5,6 +5,17 @@
         <p class="card-text">{{post.user.name}}</p>
         <p class="card-text">{{format_date post.date_created}}</p>
         <p class="card-text">{{post.contents}}</p>
+        
+        {{#each posts as |comment|}}
+        <div class="card mt-3">
+            <div class="card-body">
+                <p class="card-text">Comment by {{comment.user.name}}</p>
+                <p class="card-text">{{comment.contents}}</p> <!-- Display comment content -->
+                <p class="card-text">{{format_date comment.date_created}}</p>
+            </div>
+        </div>
+        {{/each}}
+        
     </div>
 </div>
 {{/each}}

@@ -24,9 +24,10 @@ router.delete('/:id', withAuth, async (req, res) => {
     // Delete the post
     await post.destroy();
 
-    res.status(204).send(); // No content after successful deletion
+    res.status(204).end();
   } catch (err) {
-    res.status(500).json(err);
+    console.error('Error deleting post:', err);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 });
 

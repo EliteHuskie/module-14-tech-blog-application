@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { Post } = require('../../models');
+const { Post, Comment } = require('../../models');
 
 // Route to delete a post
 router.delete('/:id', withAuth, async (req, res) => {

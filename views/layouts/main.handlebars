@@ -15,8 +15,8 @@
             </h1>
             <nav class="mt-3">
                 <a href="/" class="btn btn-secondary me-2">Home</a>
-                {{#if logged_in}}
                 <a href="/dashboard" class="btn btn-primary me-2">Dashboard</a>
+                {{#if logged_in}}
                 <button id="logout" class="btn btn-danger">Logout</button>
                 {{else}}
                 <a href="/login" class="btn btn-primary">Login</a>
@@ -31,5 +31,27 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+    <script>
+    // Check if the user is logged in
+    const isLoggedIn = {{logged_in}};
+
+    // Function to redirect to the login page
+    const redirectToLogin = () => {
+        window.location.href = "/login"; // Redirect to the login page
+    };
+
+    // Add an event listener to the dashboard button
+    const dashboardButton = document.querySelector('.btn-primary'); // Select the dashboard button
+    dashboardButton.addEventListener('click', () => {
+        if (!isLoggedIn) {
+            redirectToLogin();
+        }
+    });
+
+    // You can also redirect on page load if the user is not logged in
+    if (!isLoggedIn && window.location.pathname === "/dashboard") {
+        redirectToLogin();
+    }
+    </script>
 </body>
 </html>
